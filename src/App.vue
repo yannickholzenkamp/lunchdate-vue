@@ -1,47 +1,25 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+  import { BalApp, BalFooter, BalHeading, BalButton } from '@baloise/design-system-components-vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <BalApp class="has-sticky-footer has-background">
+    <header>
+      <!-- Header content -->
+    </header>
+    <main class="container">
+      <BalHeading>Hello World!</BalHeading>
+      <BalButton>Button</BalButton>
+      <!-- Page content -->
+    </main>
+    <BalFooter>
+      <div class="container">
+        <!-- Footer content -->
+        Footer
+      </div>
+    </BalFooter>
+  </BalApp>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
+<style>
 </style>
